@@ -1,15 +1,15 @@
 #include<iostream>
 using namespace std;
-int main(){
-    int n, fact=1;
-    cout << "Enter a number: " << endl;
-    cin >> n;
-    for(int counter = n; counter >=2; counter--){
-        cout << "counter: " << counter << endl;
-        fact = fact * counter;
-        cout << "fact: " << fact << endl;
+int factorial(int n){
+    if(n==0||n==1){
+        return 1;
     }
-    cout << "The factorial is: " << fact << endl;
-    return 0;
-}
 
+    return n*factorial(n-1);
+}
+int main(){
+    int n;
+    cout << "Enter the value: ";
+    cin >> n;
+    cout << "Factorial: " << factorial(n) << endl;
+}
