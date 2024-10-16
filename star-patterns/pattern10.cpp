@@ -5,10 +5,12 @@ int main(){
     cout << "Enter a value: ";
     cin >> n;
     int i = 0;
+    char ch = 'a';
     while(i<=n){
         int j = 0;
         while(j!=i){
-            cout << i-j+1;
+            cout << ch;
+            ch = ch + 1;
             j = j+1;
         }
         cout << endl;
